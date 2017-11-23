@@ -1,7 +1,8 @@
+import { Artist } from '../models/artist';
+
 export class ArtistsService {
 
-  private artists <Arr>= [
-    { name: 'James Blake', image: 'http://oxfordstudent.com/wp-content/uploads/2016/05/James-Blake-1.jpg', video: 'https://www.youtube.com/watch?v=isIABK-0ohQ', yearsActive: 8 },
+  public artists: Artist[] = [
     { name: 'James Blake', image: 'http://oxfordstudent.com/wp-content/uploads/2016/05/James-Blake-1.jpg', video: 'https://www.youtube.com/watch?v=isIABK-0ohQ', yearsActive: 8 },
     { name: 'Radiohead', image: 'https://www.billboard.com/files/media/02-Radiohead-press-photo-2-white-2016-billboard-650-1548.jpg', video: 'https://www.youtube.com/watch?v=JqBgXPuhyOs', yearsActive: 32 },
     { name: 'Cass McCombs', image: 'http://www.fugitivesounds.org/wp-content/uploads/2016/08/Cass.jpg', video: 'https://www.youtube.com/watch?v=1R4TEsqkwO8', yearsActive: 6 },
