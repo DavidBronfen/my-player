@@ -4,13 +4,11 @@
   </mat-card-header>
 
   <img mat-card-image src={{artist.image}}
-    (dblclick)="toggleImage(artist.name)"
-    [ngClass]="{'show-image': artistName === artist.name}" />
+    (dblclick)="toggleImage(i + 1)"
+    [ngClass]="{'show-image': elementIndex === i + 1}" />
 
   <mat-card-content>
-    <p>
-      Here can be some description
-    </p>
+    <p>Here can be some description</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-mini-fab (click)="playVideo(artist.video)">

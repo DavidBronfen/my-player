@@ -11,17 +11,17 @@ import { ArtistsService } from '../../services/artists.service';
 export class SidebarComponent {
 
   artistsList: Artist[];
-  artistName: string;
+  elementIndex: number;
 
   constructor( private artistsObj: ArtistsService ) {
     this.artistsList = this.artistsObj.getArtists();
   }
 
-  toggleImage(name: string) {
-    if (this.artistName === name) {
-      this.artistName = '';
+  toggleImage(index: number) {
+    if (this.elementIndex === index) {
+      this.elementIndex = 0;
     } else {
-      this.artistName = name;
+      this.elementIndex = index;
     }
   }
 

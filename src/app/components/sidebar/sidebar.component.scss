@@ -1,7 +1,23 @@
-:host
-{
-
+:host {
   width: 30%;
+
+  mat-card {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-top: 10px;
+    }
+
+    mat-card-header {
+      justify-content: center;
+
+      mat-card-title {
+        font-size: 30px;
+      }
+    }
+  }
 
   .show-image {
     width: 100vw;
