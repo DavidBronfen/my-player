@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { Artist } from '../../models/artist';
 import { ArtistsService } from '../../services/artists.service';
@@ -12,8 +13,13 @@ export class SidebarComponent {
 
   artistsList: Artist[];
   elementIndex: number;
+  showVideo: boolean = false;
+  currentVideo: string;
 
-  constructor( private artistsObj: ArtistsService ) {
+  constructor(
+    private artistsObj: ArtistsService,
+    public sanitizer: DomSanitizer
+  ) {
     this.artistsList = this.artistsObj.getArtists();
   }
 
@@ -26,7 +32,13 @@ export class SidebarComponent {
   }
 
   playVideo(videURL) {
-    console.log(videURL);
+    this.currentVideo = this.sanitizer.bypassSecurityTrustResourceUrl(videURL);
+    this.showVideo =! this.showVideo;
+  }
+
+  clearVideo() {
+    this.currentVideo = '';
+    this.showVideo =! this.showVideo;
   }
 
 }

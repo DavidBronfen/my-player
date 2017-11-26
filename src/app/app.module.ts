@@ -7,6 +7,7 @@ import { MatButtonModule,
          MatCardModule,
          MatSidenavModule,
          MatIconModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { ArtistsService } from './services/artists.service';
     MatButtonModule,
     MatCardModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
   ],
   providers: [ArtistsService],
   bootstrap: [AppComponent]
