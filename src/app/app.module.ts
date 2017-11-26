@@ -7,12 +7,14 @@ import { MatButtonModule,
          MatCardModule,
          MatSidenavModule,
          MatIconModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ArtistsService } from './services/artists.service';
 
 
 @NgModule({
@@ -28,9 +30,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MatButtonModule,
     MatCardModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
   ],
-  providers: [],
+  providers: [ArtistsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
