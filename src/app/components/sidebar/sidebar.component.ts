@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { Artist } from '../../models/artist';
 import { ArtistsService } from '../../services/artists.service';
@@ -14,7 +14,7 @@ export class SidebarComponent {
   artistsList: Artist[];
   elementIndex: number;
   showVideo: boolean = false;
-  currentVideo: string;
+  currentVideo: SafeResourceUrl;
 
   constructor(
     private artistsObj: ArtistsService,
@@ -31,7 +31,7 @@ export class SidebarComponent {
     }
   }
 
-  playVideo(videURL) {
+  playVideo(videURL: string) {
     this.currentVideo = this.sanitizer.bypassSecurityTrustResourceUrl(videURL);
     this.showVideo =! this.showVideo;
   }
