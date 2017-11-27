@@ -1,4 +1,4 @@
-<div class="side-wrapper" fxLayout="column" fxLayoutAlign="space-around start">
+<div class="side-wrapper">
   <div class="cards-wrapper">
     <mat-card *ngFor="let artist of artistsList; let i = index">
       <mat-card-header>
@@ -26,7 +26,6 @@
     <div class="close" (click)="clearVideo()">
       <mat-icon>close</mat-icon>
     </div>
-    <!-- <i class="material-icons">close</i> -->
     <iframe
       width="560"
       height="315"
