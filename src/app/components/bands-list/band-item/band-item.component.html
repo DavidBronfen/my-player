@@ -1,3 +1,20 @@
-<p>
-  band-item works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{band.name}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image src={{band.image}}
+    (dblclick)="toggleImage(bandIndex + 1)"
+    [ngClass]="{'show-image': elementIndex === bandIndex + 1}" />
+
+  <mat-card-content>
+    <p>Here can be some description</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-mini-fab (click)="playVideo(band.video)">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+
+    <button mat-raised-button>Show more info</button>
+  </mat-card-actions>
+</mat-card>

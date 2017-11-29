@@ -1,5 +1,18 @@
-<p>
-  bands-list works!
-</p>
+<div class="side-wrapper">
+  <div class="cards-wrapper">
+    <app-band-item *ngFor="let band of bandsList; let i = index" [band]="band" [bandIndex]="i"></app-band-item>
+  </div>
 
-<app-band-item></app-band-item>
+  <div class="artist-video-wrapper" *ngIf="showVideo">
+    <div class="close" (click)="clearVideo()">
+      <mat-icon>close</mat-icon>
+    </div>
+    <iframe
+    width="560"
+    height="315"
+    [src]=currentVideo
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+</div>

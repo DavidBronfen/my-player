@@ -12,7 +12,6 @@ import { ArtistsService } from '../../services/artists.service';
 export class SidebarComponent {
 
   artistsList: Artist[];
-  elementIndex: number;
   showVideo: boolean = false;
   currentVideo: SafeResourceUrl;
 
@@ -21,14 +20,6 @@ export class SidebarComponent {
     public sanitizer: DomSanitizer
   ) {
     this.artistsList = this.artistsObj.getArtists();
-  }
-
-  toggleImage(index: number) {
-    if (this.elementIndex === index) {
-      this.elementIndex = 0;
-    } else {
-      this.elementIndex = index;
-    }
   }
 
   playVideo(videURL: string) {
