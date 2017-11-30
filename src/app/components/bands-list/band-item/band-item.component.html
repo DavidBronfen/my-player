@@ -4,8 +4,7 @@
   </mat-card-header>
 
   <img mat-card-image src={{band.image}}
-    (dblclick)="toggleImage(bandIndex + 1)"
-    [ngClass]="{'show-image': elementIndex === bandIndex + 1}" />
+    (dblclick)="toggleImage(bandIndex + 1)" />
 
   <mat-card-content>
     <p>Here can be some description</p>

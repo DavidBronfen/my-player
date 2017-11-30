@@ -12,9 +12,21 @@ export class BandsListComponent implements OnInit {
   @Input()
   bandsList: Artist[];
 
+  bandIndex: number
+  elementIndex: number;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setIndex(index: number) {
+    console.log(index);
+    if (this.elementIndex === index) {
+      this.elementIndex = 0;
+    } else {
+      this.elementIndex = index;
+    }
   }
 
 }

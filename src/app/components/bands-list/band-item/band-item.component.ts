@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Artist } from '../../../models/artist';
 
@@ -15,17 +15,16 @@ export class BandItemComponent {
   @Input()
   bandIndex: number;
 
+  @Output()
+  showImage: EventEmitter<Artist> = new EventEmitter<Artist>();
+
+
   elementIndex: number;
 
   constructor() { }
 
-  toggleImage(index: number) {
-    debugger;
-    if (this.elementIndex === index) {
-      this.elementIndex = 0;
-    } else {
-      this.elementIndex = index;
-    }
+  toggleImage(index) {
+    this.showImage.emit(index);
   }
 
 }

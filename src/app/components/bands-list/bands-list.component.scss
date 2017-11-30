@@ -1,4 +1,10 @@
-.side-wrapper {
+:host {
+  .show-image {
+    border: 1px solid red;
+      img {
+        width: 100vw;
+      }
+  }
 
   .artist-video-wrapper {
     background-color: rgba(0, 0, 0, .75);
