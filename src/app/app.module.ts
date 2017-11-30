@@ -9,20 +9,24 @@ import { MatButtonModule,
          MatIconModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ArtistsService } from './services/artists.service';
-
+import { BandsListComponent } from './components/bands-list/bands-list.component';
+import { SearchComponent } from './components/search/search.component';
+import { BandItemComponent } from './components/bands-list/band-item/band-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    BandsListComponent,
+    SearchComponent,
+    BandItemComponent,
   ],
   imports: [
     BrowserModule,
