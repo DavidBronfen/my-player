@@ -1,5 +1,6 @@
+<app-search (searchArtist)="setSearchTerm($event)"></app-search>
 <app-band-item
-  *ngFor="let band of bandsList; let i = index"
+  *ngFor="let band of bandsList | searchFilter:term; let i = index"
   (showImage)="setIndex($event)"
   [band]="band" [bandIndex]="i"
   [ngClass]="{'show-image': elementIndex === i + 1}">
