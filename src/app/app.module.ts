@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 // Angular material imports.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule,
          MatCardModule,
          MatSidenavModule,
-         MatIconModule } from '@angular/material';
+         MatIconModule,
+         MatInputModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { ArtistsService } from './services/artists.service';
 import { BandsListComponent } from './components/bands-list/bands-list.component';
 import { SearchComponent } from './components/search/search.component';
 import { BandItemComponent } from './components/bands-list/band-item/band-item.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { BandItemComponent } from './components/bands-list/band-item/band-item.c
     BandsListComponent,
     SearchComponent,
     BandItemComponent,
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,8 @@ import { BandItemComponent } from './components/bands-list/band-item/band-item.c
     MatSidenavModule,
     MatIconModule,
     FlexLayoutModule,
+    MatInputModule,
+    FormsModule,
   ],
   providers: [ArtistsService],
   bootstrap: [AppComponent]

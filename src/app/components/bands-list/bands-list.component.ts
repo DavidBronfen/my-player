@@ -14,6 +14,7 @@ export class BandsListComponent implements OnInit {
 
   bandIndex: number
   elementIndex: number;
+  term: string;
 
   constructor() { }
 
@@ -21,12 +22,16 @@ export class BandsListComponent implements OnInit {
   }
 
   setIndex(index: number) {
-    console.log(index);
     if (this.elementIndex === index) {
       this.elementIndex = 0;
     } else {
       this.elementIndex = index;
     }
+  }
+
+  setSearchTerm(term: string) {
+    console.log("setSearchTerm ->", term);
+    this.term = term;
   }
 
 }
