@@ -30,7 +30,6 @@ export class BandsListComponent implements OnInit {
   }
 
   setSearchTerm(term: string) {
-    console.log("setSearchTerm ->", term);
     this.term = term;
   }
 
