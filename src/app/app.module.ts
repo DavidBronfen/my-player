@@ -20,6 +20,7 @@ import { BandsListComponent } from './components/bands-list/bands-list.component
 import { SearchComponent } from './components/search/search.component';
 import { BandItemComponent } from './components/bands-list/band-item/band-item.component';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { ImagePreviewComponent } from './components/image-preview/image-preview.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     SearchComponent,
     BandItemComponent,
     SearchFilterPipe,
+    ImagePreviewComponent,
   ],
   imports: [
     BrowserModule,
