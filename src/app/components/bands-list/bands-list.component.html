@@ -1,11 +1,8 @@
 <app-search (searchArtist)="setSearchTerm($event)"></app-search>
 <app-band-item
-  *ngFor="let band of bandsList | searchFilter:term; let i = index"
-  (showImage)="setIndex($event)"
-  [band]="band" [bandIndex]="i"
-  [ngClass]="{'show-image': elementIndex === i + 1}">
+  *ngFor="let band of bandsList | searchFilter:term"
+  [band]="band">
 </app-band-item>
-
 
 <div class="artist-video-wrapper" *ngIf="showVideo">
   <div class="close" (click)="clearVideo()">

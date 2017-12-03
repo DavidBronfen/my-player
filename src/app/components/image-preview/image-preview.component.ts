@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-image-preview',
   templateUrl: './image-preview.component.html',
   styleUrls: ['./image-preview.component.scss']
 })
-export class ImagePreviewComponent implements OnInit {
+export class ImagePreviewComponent {
 
-  constructor() { }
+  @Input()
+  imagePath: string;
+  toggleImg: boolean = false;
 
-  ngOnInit() {
+  constructor() {
   }
+
+    toggleImage() {
+      this.toggleImg = !this.toggleImg;
+    }
 
 }
