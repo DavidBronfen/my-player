@@ -12,8 +12,6 @@ export class BandsListComponent implements OnInit {
   @Input()
   bandsList: Artist[];
 
-  bandIndex: number
-  elementIndex: number;
   term: string;
 
   constructor() { }
@@ -21,16 +19,7 @@ export class BandsListComponent implements OnInit {
   ngOnInit() {
   }
 
-  setIndex(index: number) {
-    if (this.elementIndex === index) {
-      this.elementIndex = 0;
-    } else {
-      this.elementIndex = index;
-    }
-  }
-
   setSearchTerm(term: string) {
     this.term = term;
   }
-
 }

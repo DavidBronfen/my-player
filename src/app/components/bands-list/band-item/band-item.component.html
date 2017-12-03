@@ -3,12 +3,12 @@
     <mat-card-title>{{band.name}}</mat-card-title>
   </mat-card-header>
 
-  <img mat-card-image src={{band.image}}
-    (dblclick)="toggleImage(bandIndex + 1)" />
+  <app-image-preview [imagePath]="band.image"></app-image-preview>
 
   <mat-card-content>
     <p>Here can be some description</p>
   </mat-card-content>
+  
   <mat-card-actions>
     <button mat-mini-fab (click)="playVideo(band.video)">
       <mat-icon>play_arrow</mat-icon>
